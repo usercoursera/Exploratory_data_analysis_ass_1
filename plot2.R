@@ -2,7 +2,7 @@
 rm(list=ls())
 
 # store the data in the mydata variable, substituting "?" with "NA
-mydata <- read.table("data/household_power_consumption.txt",na.strings=c("?", "NA"),sep=";",colClasses=c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),header=TRUE)
+mydata <- read.table("household_power_consumption.txt",na.strings=c("?", "NA"),sep=";",colClasses=c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),header=TRUE)
 
 # select the required subset of the data
 dataNeeded <- subset(mydata,mydata$Date=="1/2/2007" | mydata$Date=="2/2/2007")
