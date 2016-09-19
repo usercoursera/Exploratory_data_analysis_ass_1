@@ -1,6 +1,6 @@
 # clean the environment
 rm(list=ls())
-
+setwd("/home/Desktop/r_work_dir/Exploratory_data_analysis_ass_1")
 # store the data in the mydata variable, substituting "?" with "NA
 mydata <- read.table("household_power_consumption.txt",na.strings=c("?", "NA"),sep=";",colClasses=c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),header=TRUE)
 
@@ -30,13 +30,13 @@ axis(1, at=max(dataNeeded$TimeDate)+60,label="Sat")
 
 # add further lines to the plot
 lines(dataNeeded$TimeDate,dataNeeded$Sub_metering_2,col="red")
-lines(dataNeeded$TimeDate,dataNeeded$Sub_metering_3,col="purple")
+lines(dataNeeded$TimeDate,dataNeeded$Sub_metering_3,col="blue")
 
 # add a legend
-legend("topright",c("Sub_meterin_1","Sub_metering_2","Sub_metering_3"),lty=c(1,1,1),col=c("black","red","purple"))
+legend("topright",c("Sub_meterin_1","Sub_metering_2","Sub_metering_3"),lty=c(1,1,1),col=c("black","red","blue"))
 
 # save the graph to a PNG file
-dev.copy(png, file = "plot2.png") 
+dev.copy(png, file = "plot3.png") 
 
 # close the PNG device
 dev.off()
