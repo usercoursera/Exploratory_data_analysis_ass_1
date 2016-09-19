@@ -1,6 +1,6 @@
 # clean the environment
 rm(list=ls())
-setwd("/home/Desktop/r_work_dir/Exploratory_data_analysis_ass_1")
+
 # store the data in the mydata variable, substituting "?" with "NA
 mydata <- read.table("household_power_consumption.txt",na.strings=c("?", "NA"),sep=";",colClasses=c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),header=TRUE)
 
